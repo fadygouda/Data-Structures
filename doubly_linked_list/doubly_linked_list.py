@@ -121,8 +121,8 @@ class DoublyLinkedList:
             self.tail = None
             self.length -=1
         elif self.head is node:
-            self.head = self.head.next
-            self.head.prev = None
+            self.head = node.next
+            node.delete()
             self.length -=1
         elif self.tail is node:
             self.tail = self.tail.prev
